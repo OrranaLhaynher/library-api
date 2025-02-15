@@ -1,13 +1,10 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using MyFirstAPI.Communication.Requests;
 using MyFirstAPI.Communication.Responses;
 
 namespace MyFirstAPI.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : MyFirstAPIController
     {
         [HttpGet]
         [Route("{id}")] //para parametro na rota, ex: /user/1/orrana. Sem isso fica /user?age=1&name=orrana
